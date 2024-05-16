@@ -46,10 +46,7 @@ public class TestAppFXLambdaExpression extends Application {
             try {
                 System.out.println("In the Thread...");
                 Thread.sleep(5000);
-                Platform.runLater(()->{
-                    System.out.println(Thread.currentThread().getName());  //JavaFX Application Thread
-                    window.close();
-                });
+                Platform.runLater(window::close);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
