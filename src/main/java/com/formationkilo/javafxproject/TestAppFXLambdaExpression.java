@@ -52,6 +52,10 @@ public class TestAppFXLambdaExpression extends Application {
         super.stop();
         System.out.println("Application stopped!");
     }
+
+    public static void main(String[] args){
+        Application.launch(args);
+    }
 }
 
 
