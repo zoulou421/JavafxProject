@@ -23,24 +23,9 @@ public class TestAppFXLambdaExpression extends Application {
        window.show();
        window.centerOnScreen();
 
-       //To kwo the current
-        //Thread.sleep(5000);
 
       // System.out.println(Thread.currentThread().getName()); //JavaFX Application Thread
          System.out.println("Before the Thread...");
-       /*  new Thread(()->{
-             try {
-                 System.out.println("In the Thread...");
-                 Thread.sleep(5000);
-                 Platform.runLater(()->{
-                     System.out.println(Thread.currentThread().getName());  //JavaFX Application Thread
-                     window.close();
-                 });
-             } catch (InterruptedException e) {
-                 throw new RuntimeException(e);
-             }
-
-         }).start();*/
 
         new Thread(()->{
             try {
@@ -53,6 +38,19 @@ public class TestAppFXLambdaExpression extends Application {
 
         }).start();
 
+
+    }
+
+    @Override
+    public void init() throws Exception {
+        super.init();
+        System.out.println("Application started");
+    }
+
+    @Override
+    public void stop() throws Exception {
+        super.stop();
+        System.out.println("Application stopped!");
     }
 }
 
