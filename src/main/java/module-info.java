@@ -2,8 +2,8 @@ module com.formationkilo.javafxproject {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
-    requires javafx.graphics;
-    requires javafx.base;
+    requires transitive javafx.graphics;
+    requires transitive javafx.base;
 
 
    /** requires org.controlsfx.controls;

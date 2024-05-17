@@ -15,9 +15,12 @@ public class MainApp  extends Application {
         StackPane root=new StackPane();
         Rectangle rectangle=new Rectangle(300,100, Color.YELLOW);
         Label label=new Label("label added");
-        root.getChildren().add(label);
-        root.getChildren().add(rectangle);
-        rectangle.toBack();
+        //root.getChildren().add(label);
+       // root.getChildren().add(rectangle);
+        //rectangle.toBack();
+        //label.toFront();
+        //Multi add
+        root.getChildren().addAll(rectangle,label);
         Scene scene=new Scene(root,600,400);
         stage.setScene(scene);
         stage.show();
