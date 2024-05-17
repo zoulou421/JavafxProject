@@ -121,6 +121,18 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/eu.hansolo/toolboxfx -->
+        <dependency>
+            <groupId>eu.hansolo</groupId>
+            <artifactId>toolboxfx</artifactId>
+            <version>17.0.23</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>17.0.6</version>
+        </dependency>
 
 
     </dependencies>

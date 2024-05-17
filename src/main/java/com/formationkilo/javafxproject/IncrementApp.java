@@ -12,6 +12,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class IncrementApp extends Application {
+    private int totalButtonInDec=1;
     @Override
     public void start(Stage sWindow) throws Exception {
         sWindow.setTitle("Incremental pp");
@@ -20,12 +21,31 @@ public class IncrementApp extends Application {
         root.setPadding(new Insets(25));
         Label statusLabel= new Label("Number of increment: 1");
         Button button1=new Button("Increase");
-        button1.setOnAction(e -> System.out.println("button1 clicked!"));
+        button1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                totalButtonInDec++;
+                statusLabel.setText("Number of increment:  "+totalButtonInDec);
+                System.out.println(totalButtonInDec+" button1 clicked!");
+            }
+        });
+       // button1.setOnAction(e -> System.out.println("button1 clicked!"));
         Button button2=new Button("Decrease");
-        button2.setOnAction(e-> System.out.println("button2 clicked!"));
+        //button2.setOnAction(e-> System.out.println("button2 clicked!"));
+        button2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                totalButtonInDec--;
+                if(totalButtonInDec<1){
+                    totalButtonInDec++;
+                }
+                statusLabel.setText("Number of increment:  "+totalButtonInDec);
+                System.out.println(totalButtonInDec+" button2 clicked!");
+            }
+        });
 
         root.getChildren().addAll(statusLabel,button1,button2);
-        Scene scene=new Scene(root);
+        Scene scene=new Scene(root,300,200);
         sWindow.setScene(scene);
         sWindow.show();
     }

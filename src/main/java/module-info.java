@@ -5,6 +5,7 @@ module com.formationkilo.javafxproject {
     requires  transitive javafx.graphics;
     requires transitive javafx.base;
 
+    //requires  eu.hansolo.fx.countries;
 
 
     /** requires org.controlsfx.controls;
@@ -16,8 +17,7 @@ module com.formationkilo.javafxproject {
     requires com.almasb.fxgl.all;*/
 
 
-   // requires eu.hansolo.toolboxfx;
-
     opens com.formationkilo.javafxproject to javafx.fxml;
     exports com.formationkilo.javafxproject;
+
 }
