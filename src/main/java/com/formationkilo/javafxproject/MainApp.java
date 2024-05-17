@@ -13,8 +13,11 @@ public class MainApp  extends Application {
     public void start(Stage stage) throws Exception  {
         stage.setTitle("Incremental pp");
         StackPane root=new StackPane();
-        root.getChildren().add(new Rectangle(300,100, Color.YELLOW));
-        root.getChildren().add(new Label("label added"));
+        Rectangle rectangle=new Rectangle(300,100, Color.YELLOW);
+        Label label=new Label("label added");
+        root.getChildren().add(label);
+        root.getChildren().add(rectangle);
+        rectangle.toBack();
         Scene scene=new Scene(root,600,400);
         stage.setScene(scene);
         stage.show();
