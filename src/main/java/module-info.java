@@ -2,7 +2,7 @@ module com.formationkilo.javafxproject {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
-    requires transitive javafx.graphics;
+    requires  transitive javafx.graphics;
     requires transitive javafx.base;
 
 
