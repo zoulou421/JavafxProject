@@ -7,9 +7,14 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import java.util.Objects;
 
 public class IncrementApp extends Application {
     private int totalButtonInDec=1;
@@ -19,12 +24,35 @@ public class IncrementApp extends Application {
 
     @Override
     public void start(Stage sWindow) throws Exception {
-        sWindow.setTitle("Incremental pp");
+        sWindow.setTitle("Incremental App");
         VBox root=new VBox(10);
         root.setAlignment(Pos.CENTER);
         root.setPadding(new Insets(25));
+
+        ImageView likeImageView1=new ImageView(String.valueOf(getClass().getResource("/pictures/increase.png")));
+        ImageView likeImageView1_over=new ImageView(String.valueOf(getClass().getResource("/pictures/increase-over.png")));
+        ImageView likeImageView2=new ImageView(String.valueOf(getClass().getResource("/pictures/decrease.png")));
+        ImageView likeImageView2_over=new ImageView(String.valueOf(getClass().getResource("/pictures/decrease-over.png")));
         statusLabel= new Label("Number of increment: 1");
         button1=new Button("Increase");
+        button1.setGraphic(likeImageView1);
+        button1.setContentDisplay(ContentDisplay.LEFT);
+        button1.setOnMouseEntered(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                System.out.println("Hover!!!");
+                button1.setGraphic(likeImageView1_over);
+            }
+        });
+
+        button1.setOnMouseExited(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                System.out.println("Hover!!!");
+                button1.setGraphic(likeImageView1);
+            }
+        });
+        System.out.println("class: "+getClass().getResource("/pictures/increase.png"));
         button1.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -35,6 +63,8 @@ public class IncrementApp extends Application {
         });
        // button1.setOnAction(e -> System.out.println("button1 clicked!"));
         button2=new Button("Decrease");
+        button2.setGraphic(likeImageView2);
+        button2.setContentDisplay(ContentDisplay.LEFT);
         //button2.setOnAction(e-> System.out.println("button2 clicked!"));
         button2.setOnAction(new EventHandler<ActionEvent>() {
             @Override

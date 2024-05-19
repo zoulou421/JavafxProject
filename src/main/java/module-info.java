@@ -4,6 +4,7 @@ module com.formationkilo.javafxproject {
     requires javafx.web;
     requires  transitive javafx.graphics;
     requires transitive javafx.base;
+    requires javafx.graphicsEmpty;
 
     //requires  eu.hansolo.fx.countries;
 
@@ -19,5 +20,6 @@ module com.formationkilo.javafxproject {
 
     opens com.formationkilo.javafxproject to javafx.fxml;
     exports com.formationkilo.javafxproject;
+    //exports com.formationkilo.javafxproject to javafx.graphics;
 
 }
