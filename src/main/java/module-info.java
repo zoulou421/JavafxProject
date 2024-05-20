@@ -5,6 +5,7 @@ module com.formationkilo.javafxproject {
     requires  transitive javafx.graphics;
     requires transitive javafx.base;
     requires javafx.graphicsEmpty;
+
     //requires eu.hansolo.fx.countries;
 
     //requires  eu.hansolo.fx.countries;
