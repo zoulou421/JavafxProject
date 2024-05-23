@@ -57,13 +57,15 @@ public class MainCSSV2 extends Application {
         Scene scene=new Scene(root);//scene automatically
         System.out.println("Root element 2 : "+scene.getRoot());
         scene.getStylesheets().add(String.valueOf((getClass().getResource("/css/app.css"))));
+        //scene.getStylesheets().add("https://fonts.googleapis.com/css2?family=Pacifico"); required internet
+        //load it manually
 
         sWindow.setScene(scene);
         sWindow.show();
     }
 
     public void refactoIncreDec(int nbB){
-        statusLabel.setText("Number of increment:  "+nbB);
+        statusLabel.setText("Increment number:"+nbB);
     }
 
     private class MyClassEventHandler implements EventHandler<ActionEvent> {
