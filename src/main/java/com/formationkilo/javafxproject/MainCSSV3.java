@@ -14,7 +14,7 @@ public class MainCSSV3 extends Application {
 
     @Override
     public void start(Stage sWindow) throws Exception {
-        Parent root=FXMLLoader.load(((Objects.requireNonNull(getClass().getResource("/fxml/Main.fxml")))));
+        Parent root=FXMLLoader.load(((Objects.requireNonNull(getClass().getResource("/fxml/MainSBuilder.fxml")))));
 
         sWindow.setTitle("Incremental pp");
         Scene scene=new Scene(root);
@@ -25,5 +25,7 @@ public class MainCSSV3 extends Application {
         sWindow.show();
     }
 
-
+   public static void main(String[] v){
+        launch(v);
+    }
 }
