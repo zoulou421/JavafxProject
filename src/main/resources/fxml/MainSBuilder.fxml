@@ -8,11 +8,11 @@
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/Main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.formationkilo.javafxproject.MainSBuilderController">
    <children>
       <Label id="titleLabel" fx:id="titleLabel" text="Central App Increment" />
-      <Label id="statusLabel" fx:id="statusLabel" text="You've currently:  1 " />
+      <Label id="statusLabel" fx:id="statusLabel" />
       <HBox spacing="10.0">
          <children>
             <Button mnemonicParsing="false" onAction="#handleAddIncrementButtonAction" text="ADD INCREMENT" />
-            <Button mnemonicParsing="false" onAction="#handleRemoveIncrementButtonAction" text="REMOVE DISCREMENT" />
+            <Button mnemonicParsing="false" onAction="#handleRemoveIncrementButtonAction" text="REMOVE INCREMENT" />
          </children>
       </HBox>
    </children>

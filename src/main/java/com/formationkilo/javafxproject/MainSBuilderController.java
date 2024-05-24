@@ -3,6 +3,9 @@ package com.formationkilo.javafxproject;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -18,9 +21,10 @@ public class MainSBuilderController implements Initializable {
     private Label statusLabel;
 
     @FXML
-    protected void handleAddIncrementButtonAction(ActionEvent e){
+    protected void handleAddIncrementButtonAction(ActionEvent e) throws FileNotFoundException {
      System.out.println("handleAddIncrementButtonAction CALLED");
-     updateLabelStatus(++totalIncrementCount);
+
+
     }
 
     private void updateLabelStatus(int i) {
@@ -33,10 +37,12 @@ public class MainSBuilderController implements Initializable {
      if(totalIncrementCount>0){
          updateLabelStatus(--totalIncrementCount);
      }
+
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        updateLabelStatus(totalIncrementCount);
         System.out.println("Init JavaFX controller");
     }
 
