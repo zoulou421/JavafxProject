@@ -6,13 +6,24 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
       stylesheets="@../css/Main.css"
 >
     <children>
-        <Label text="Hello from fxml" />
-        <Label text="Bonevy from fxml" />
+        <Label id="titleLabel" text="The incremental app"/>
+        <Label id="statusLabel" text="You've currently"/>
     </children>
+    <HBox alignment="CENTER" spacing="10.0">
+        <children>
+            <Button text="ADD INCREMENT"/>
+            <Button text="ADD DISCREMENT"/>
+        </children>
+    </HBox>
+    <padding>
+        <Insets left="25.0" top="25.0" bottom="25.0" right="25.0" />
+    </padding>
 </VBox>
 
